@@ -46,9 +46,9 @@ def make_level_pack_from_json(json_data):
       monsterPath.append(coord)
     monster = cc_classes.CCMonsterMovementField(monsterPath)
     newLevel.add_field(monster)
+    newLevelPack.add_level(newLevel)
 
   # Add level to pack
-  newLevelPack.add_level(newLevel)
   return newLevelPack
     
 if __name__ == "__main__":
@@ -62,9 +62,5 @@ if __name__ == "__main__":
   
   print(cc_dat_utils.make_cc_level_pack_from_dat(dat_level))
 
-# copy/paste phil_level_pack.dat to tileworld/sets
-# play your level!
-
-# questions:
-# cc_dat_utils?
-# password arr
+# move "cc_assignment_dat.dat" that is generated in the root folder to the data folder of tworld
+# run tworld and play your level!
